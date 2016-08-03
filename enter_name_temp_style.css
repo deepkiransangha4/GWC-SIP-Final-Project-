@@ -3,7 +3,7 @@ body{
 	margin-left: 80px;
 	margin-right: 80px;
 	margin-top: 150px;
-	font-family: "Hobo Std Medium" Arial sans
+	font-family: "Hobo Std Medium", Arial, sans
 }
 #name{
 	text-align: center;
@@ -13,4 +13,5 @@ body{
 }
 h2{
 	margin: 50px;
+	color: #ffffff;
 }
