@@ -18,7 +18,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
   </head>
-  <body>
+  <body onload = "printName()">
 	
 	<div class="container-fluid">
 	</div>
@@ -47,6 +47,7 @@ When you get to Gaia’s house both of Gaia’s moms greet you.
 		<span class="sr-only"></span>
 		</div>
 	</div>
+	<p id = "test"></p>
    
 	<style>
 		#btn {
@@ -66,6 +67,13 @@ When you get to Gaia’s house both of Gaia’s moms greet you.
 	</style>
 	
 	<script>
-	
+		function myFunction(){console.log(window.name);}
+		
+		function printName(){
+			console.log("print name called")
+			var elem = document.getElementById("test");
+			elem.innerHTML = "Your name is "+window.name;
+			console.log("Name printed")
+		}
 
 	</script>
