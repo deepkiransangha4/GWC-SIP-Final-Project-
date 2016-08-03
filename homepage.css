@@ -1,0 +1,30 @@
+.button {
+	border-radius: 10px;
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 30px 64px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 32px;
+	font-family: "Comic Sans MS", sans-serif;
+}
+
+#start{
+	text-align: center;
+}
+
+
+body{
+	background-image: url("photo_2970_20130331.jpg");
+	background-repeat: no-repeat;
+}
+
+h1{
+	color: white;
+	text-align: center;
+	font-size: 100px;
+	font-family: "Comic Sans MS", sans-serif;
+		
+}
