@@ -1,0 +1,16 @@
+body{
+	text-align: center;
+	margin-left: 80px;
+	margin-right: 80px;
+	margin-top: 150px;
+	font-family: "Hobo Std Medium" Arial sans
+}
+#name{
+	text-align: center;
+}
+#button{
+	margin: 50px;
+}
+h2{
+	margin: 50px;
+}
