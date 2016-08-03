@@ -1,0 +1,38 @@
+div {
+    width: 100px;
+    height: 50px;
+    background-color: #7AD67A;
+    font-weight: bold;
+    position: relative;
+    -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 5s infinite;
+	font-size: 40px;
+	font-family:Arial;
+	text-align: center;
+}
+
+/* Standard syntax */
+#div5 {animation-timing-function: ease-in-out;}
+
+/* Standard syntax */
+@keyframes mymove {
+    from {left: 100px;}
+    to {left: 600px;}
+}
+
+h1 
+{
+	color:#428787;
+	font-family:comic sans MS;
+	text-align:center;
+	font-weight: bold;
+	font-size: 60px;
+}
+h3
+{
+	color: red;
+	font-family:comic sans MS;
+	text-align:center;
+	font-weight: bold;
+	font-size: 20px;
+}
