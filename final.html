@@ -70,10 +70,8 @@ When you get to Gaia’s house both of Gaia’s moms greet you.
 		function myFunction(){console.log(window.name);}
 		
 		function printName(){
-			console.log("print name called")
 			var elem = document.getElementById("test");
-			elem.innerHTML = "Your name is "+window.name;
-			console.log("Name printed")
+			elem.innerHTML = "Your name is "+window.name+" "+sessionStorage.yourname;
 		}
 
 	</script>
