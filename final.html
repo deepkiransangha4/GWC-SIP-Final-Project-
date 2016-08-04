@@ -21,64 +21,64 @@
   
   <body onload = "printName(); setAvatar(); myFunction();">
 	
-	<div class="container-fluid">
+	<div class="container-fluid" id= "parent">
+	
+	
+	
+	
+	
+	<div class="narrow"  >	
+
+		<ul>
+		<h2>Salt Water Learning</h2>
+
+
+		  <li><div class="progress" style ="margin: 20px;">
+				<div class="progress-bar" role="progressbar" aria-valuenow="75"
+				aria-valuemin="0" aria-valuemax="100" style="width:75%">
+				<span class="sr-only"></span>
+				</div></li>
+		  <li>	<p id = "test"></p></li>
+		  <img id = "avatar" src = "#" style = "width: 30%;></img>
+
+		  <p id="yourname"></p>
+		  
+		</ul>
+
+
 	</div>
 	
 	
 	
 	
 	
-	<div class="lol" >	
-
-<ul>
-<h2>Salt Water Learning</h2>
-
-
-  <li><div class="progress" style ="margin: 20px;">
-		<div class="progress-bar" role="progressbar" aria-valuenow="75"
-		aria-valuemin="0" aria-valuemax="100" style="width:75%">
-		<span class="sr-only"></span>
-		</div></li>
-  <li>	<p id = "test"></p></li>
-  <img id = "avatar" src = "#" style = "width: 30%;></img>
-
-  <p id="yourname"></p>
-  
-</ul>
-
-
-	</div>
-	
-	
-	
-	
-	
 	
 	
 
-	
-   <title>
-   Life Event
-   </title>
-   
-   <h1>
-   Playdate
-   </h1>
-   <p> 
-    Gaia the guppy invites you on a playdate!
-When you get to Gaia’s house both of Gaia’s moms greet you.
-   </p>
-   <p>
-   How do you react?
-   </p>
-   
-    <a href='life_event_result_a.html'>	 <button type="button"  class="btn btn-info">Hi Gaia's Moms.</button></a> 
-	<a href='life_event_result_b.html'>	 <button type="button" class="btn btn-info">Gaia, why do you have two Moms?</button></a>
-	<a href='life_event_result_c.html'>	 <button type="button"  class="btn btn-info">You say hi, but feel uncomfortable.</button></a>
+	<div  id = "wide"> 
+		
+	   <title>
+	   Life Event
+	   </title>
+	   
+	   <h1>
+	   Playdate
+	   </h1>
+	   <p> 
+		Gaia the guppy invites you on a playdate!
+	When you get to Gaia’s house both of Gaia’s moms greet you.
+	   </p>
+	   <p>
+	   How do you react?
+	   </p>
+	   
+		<a href='life_event_result_a.html'>	 <button type="button"  class="btn btn-info">Hi Gaia's Moms.</button></a> 
+		<a href='life_event_result_b.html'>	 <button type="button" class="btn btn-info">Gaia, why do you have two Moms?</button></a>
+		<a href='life_event_result_c.html'>	 <button type="button"  class="btn btn-info">You say hi, but feel uncomfortable.</button></a>
+		
+	</div>	
 
-	
-
-
+</div>
    
 	<style>
 		#btn {
@@ -88,7 +88,7 @@ When you get to Gaia’s house both of Gaia’s moms greet you.
 		}
 		
 		body { background-color: aqua;
-		background-image: url("wave.jpg");;
+		background-image: url("wave.jpg");
 		text-align: center;
 		font-family: "Hobo Std Medium", Arial, sans;
 		font-size: 200%;
@@ -96,44 +96,40 @@ When you get to Gaia’s house both of Gaia’s moms greet you.
 		}
 		
 
-	.lol {
-		background-color: #579CA4;
-		width: 30vw;
-		overflow: auto;
-		overflow-y: auto;
-		height: 100vh;
-		<!--vh is our saviour-->
-		}	
 		
 	ul {
 
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
-		width: 200px;
+		
 		background-color: #579CA4;
 		overflow: auto;
 		text-align: center;
 
 	}
 
-	li a {
-		display: block;
-		color: #000;
-		padding: 8px 16px;
-		text-decoration: none;
-		
-
-		
-
+	#parent {
+	display: flex;
 	}
-
-	/* Change the link color on hover */
-	li a:hover {
-		background-color: #555;
-		color: white;
+	
+	.narrow{
+		background-color: #579CA4;
+		width: 20%;
+		overflow: auto;
+		overflow-y: auto;
+		height: 100vh;
 		
-	}
+		<!--vh is our saviour-->
+		
+		}	
+		
+
+		
+	#wide{
+		
+		flex: 1;
+		}
 
 
 </style>
