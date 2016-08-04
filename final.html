@@ -1,7 +1,6 @@
 <! DOCTYPE html>
 
 <html lang="en">
-  <head> 
   <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,15 +16,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+	<script src = "avatar_script.js"></script>
   </head>
-  <body onload = "printName()">
+  <body onload = "printName(); setAvatar();">
 	
 	<div class="container-fluid">
 	</div>
+	
    <title>
    Life Event
    </title>
-   <link rel="stylesheet" href="mystyle.css">
+   
    <h1>
    Playdate
    </h1>
@@ -37,9 +38,9 @@ When you get to Gaia’s house both of Gaia’s moms greet you.
    How do you react?
    </p>
    
-   	<a class="btn btn-default" href='life_event_result_a.html'" role="button" id = "button">Hi Gaia's Moms.</a>
-	<a class="btn btn-default" href='life_event_result_b.html'" role="button" id = "button">Gaia, why do you have two Moms?</a>
-	<a class="btn btn-default" href='life_event_result_c.html'" role="button" id = "button">You say hi, but feel uncomfortable.</a>
+    <a href='life_event_result_a.html'>	 <button type="button"  class="btn btn-info">Hi Gaia's Moms.</button></a> 
+	<a href='life_event_result_b.html'>	 <button type="button" class="btn btn-info">Gaia, why do you have two Moms?</button></a>
+	<a href='life_event_result_c.html'>	 <button type="button"  class="btn btn-info">You say hi, but feel uncomfortable.</button></a>
 
 	<div class="progress" style ="margin: 50px;">
 		<div class="progress-bar" role="progressbar" aria-valuenow="75"
@@ -48,6 +49,7 @@ When you get to Gaia’s house both of Gaia’s moms greet you.
 		</div>
 	</div>
 	<p id = "test"></p>
+	<img id = "avatar" src = "#"></img>
    
 	<style>
 		#btn {
@@ -60,18 +62,12 @@ When you get to Gaia’s house both of Gaia’s moms greet you.
 		background-image: url("wave.jpg");;
 		text-align: center;
 		font-family: "Hobo Std Medium", Arial, sans;
-		font-size: 200%;}
+		font-size: 200%;
+		color: white;}
 		}
 		
 
 	</style>
 	
-	<script>
-		function myFunction(){console.log(window.name);}
-		
-		function printName(){
-			var elem = document.getElementById("test");
-			elem.innerHTML = "Your name is "+window.name+" "+sessionStorage.yourname;
-		}
-
-	</script>
+</body>
+</html>
