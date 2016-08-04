@@ -18,23 +18,35 @@
 		<script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		
-		<script src = "enter_name_script.js"></script>
+		<script src = "choose_avatar.js"></script>
 		
 		
 	</head>
 	<body style="background-color:#82D1DB;">
 		
-		<div class="container">
-		</div>
-		
+		<div class="container-fluid">
 		<h1><p>  CHOOSE A CRITTER! </p></h1>
 		
 		<br><br><br><br><br>
+
+		<div id = "parent">
+			<div class = "img">
+				<a href = "final.html"><img align="middle" src = "green_avatar.png" alt="image1" height="200" width="400" onclick = "avatar1();"> </img></a>
+			</div>
+			<div class = "img">
+				<a href = "final.html"><img align="middle" src = "yellow_avatar.png" alt="image2" height="200" width="400" onclick = "avatar2();"> </img></a>
+			</div>
+			<div class = "img">
+				<a href = "final.html"><img align="middle" src = "purple_avatar.png" alt="image3" height="200" width="400" onclick = "avatar3();"> </img></a>
+			</div>
 		
-		<div id = "image"><p><span style="cursor:pointer"><img align="middle" src = "green_avatar.png" alt="image1" height="200" width="400" onclick = "avatar1()"> </img></span>
-			<span style="cursor:pointer"><img align="middle" src = "yellow_avatar.png" alt="image2" height="200" width="400" onclick = "avatar2()"> </img></span>
-			<span style="cursor:pointer"><img align="middle" src = "purple_avatar.png" alt="image3" height="200" width="400" onclick = "avatar3()"> </img></span>
-		</p></div>
+		</div>
+		
+		</div>
+		
+		
+		
+		
 
 	</body>
 </html>
