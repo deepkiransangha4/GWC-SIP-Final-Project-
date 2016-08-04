@@ -9,3 +9,10 @@ h1{
 #image{
 	text-align: center;
 }
+.img{
+	display: inline-block;
+	
+}
+#parent{
+	text-align: center;
+}
