@@ -23,7 +23,7 @@
 	background-color: #579CA4;
 	width: 30%;
 	overflow: auto;
-	float: left;
+
 	overflow-y: auto;
 	height: 100vh;
 	<!--vh is our saviour-->
@@ -37,7 +37,7 @@ ul {
     width: 200px;
 	background-color: #579CA4;
 	overflow: auto;
-	float: left;
+	text-align: center;
 
 }
 
@@ -47,6 +47,7 @@ li a {
     padding: 8px 16px;
     text-decoration: none;
     height: 100%;
+
 	
 
 }
@@ -58,6 +59,7 @@ li a:hover {
 	
 }
 
+
 </style>
 </head>
 <body>
@@ -67,12 +69,28 @@ li a:hover {
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 <div class="lol" >	
-<h2>Game Title</h2>
 
 <ul>
-  <li><a href="#home">Home</a></li>
+<h2>Game Title</h2>
+
+
+  <li><div class="progress" style ="margin: 20px;">
+		<div class="progress-bar" role="progressbar" aria-valuenow="75"
+		aria-valuemin="0" aria-valuemax="100" style="width:75%">
+		<span class="sr-only"></span>
+		</div></li>
   <li><a href="#news">News</a></li>
   <li><a href="#contact">Contact</a></li>
   <li><a href="#about">About</a></li>
 </ul>
+
+
+	</div>
+	
+	
 </div>
+
+
+	
+	
+</body>
