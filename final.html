@@ -1,8 +1,6 @@
 <! DOCTYPE html>
 
 <html lang="en">
-  <head> 
-  
   <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,8 +16,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+	<script src = "avatar_script.js"></script>
   </head>
-  <body onload = "printName()">
+  <body onload = "printName(); setAvatar();">
 	
 	<div class="container-fluid">
 	</div>
@@ -50,6 +49,7 @@ When you get to Gaia’s house both of Gaia’s moms greet you.
 		</div>
 	</div>
 	<p id = "test"></p>
+	<img id = "avatar" src = "#"></img>
    
 	<style>
 		#btn {
@@ -68,12 +68,5 @@ When you get to Gaia’s house both of Gaia’s moms greet you.
 
 	</style>
 	
-	<script>
-		function myFunction(){console.log(window.name);}
-		
-		function printName(){
-			var elem = document.getElementById("test");
-			elem.innerHTML = "Your name is "+window.name+" "+sessionStorage.yourname;
-		}
-
-	</script>
+</body>
+</html>
