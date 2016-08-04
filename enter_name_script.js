@@ -6,4 +6,4 @@ function saveName(){
 	
 	
 	console.log(sessionStorage.yourname);
-}
+} 
