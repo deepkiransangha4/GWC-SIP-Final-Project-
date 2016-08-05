@@ -5,24 +5,33 @@ function saveName(){
 	sessionStorage.yourname = elem.value;
 	
 	sessionStorage.friendship_points = 0
+	
+
 
 	console.log(sessionStorage.yourname);
 } 
 
 
 function add_3_shells(){
-		sessionStorage.friendship_points +=3;
-		console.log(sessionStorage.friendship_points);
+		var score = parseInt(sessionStorage.friendship_points);
+		score +=3;
+		console.log(score);
+		sessionStorage.friendship_points = score;
+		
 }
 
 function add_2_shells(){
-		sessionStorage.friendship_points +=2;
-		console.log(sessionStorage.friendship_points);
+		var score = parseInt(sessionStorage.friendship_points);
+		score += 2 ;
+		console.log(score);
+		sessionStorage.friendship_points = score;
 }
 
-function add_1_shells(){
-		sessionStorage.friendship_points +=1;
-		console.log(sessionStorage.friendship_points);
+function add_1_shell(){
+		var score = parseInt(sessionStorage.friendship_points);
+		score +=1 ;
+		console.log(score);
+		sessionStorage.friendship_points = score;
 }
 function draw_shells(){
 			console.log(sessionStorage.friendship_points);
@@ -31,6 +40,8 @@ function draw_shells(){
 		var shell_pic = document.createElement("img"); 
 		
 		shell_pic.setAttribute('src', 'octopus1.png');
-		document.body.appendChild(shell_pic);
+		shell_pic.setAttribute('style', 'width: 20px');
+		document.getElementById("narrow").appendChild(shell_pic);
+		//document.body.appendChild(shell_pic);
 }}
 	
