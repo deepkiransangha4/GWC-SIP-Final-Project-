@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>   <!---original--->
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -25,22 +25,29 @@ var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
         this.canvas.width = 1260;
-        this.canvas.height = 350;
+        this.canvas.height = 450;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-        this.frameNo = 0;
         this.interval = setInterval(updateGameArea, 20);
+		window.addEventListener('keydown', function (e){
+			myGameArea.key = e.keyCode;
+		})
+		window.addEventListener('keyup', function (e){
+			myGameArea.key = false;
+		})
         },
     clear : function() {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
     },
-    stop : function() {
+    stop : function() { 
         clearInterval(this.interval);
     }
 }
 
 function component(width, height, color, x, y, type) {
+	 
 	this.type = type;
+	this.gamearea = myGameArea;
 	if (type == "image"){
 		this.image = new Image();
 		this.image.src = color;
@@ -82,6 +89,7 @@ function component(width, height, color, x, y, type) {
     }
 }
 
+
 function updateGameArea() {
     var x, height, gap, minHeight, maxHeight, minGap, maxGap;
     for (i = 0; i < myObstacles.length; i += 1) {
@@ -91,23 +99,6 @@ function updateGameArea() {
         }
     }
     myGameArea.clear();
-    myGameArea.frameNo += 1;
-    if (myGameArea.frameNo == 1 || everyinterval(150)) {
-        x = myGameArea.canvas.width;
-        minHeight = 20;
-        maxHeight = 200;
-        height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
-        minGap = 50;
-        maxGap = 200;
-        gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
-        myObstacles.push(new component(70, height, "fishhook.png", x, 0, "image"));
-        myObstacles.push(new component(70, x - height - gap, "shortseaweed.png", x, height + gap, "image"));
-    }
-    for (i = 0; i < myObstacles.length; i += 1) {
-        myObstacles[i].x += -10;
-        myObstacles[i].update();
-    }
-    myGamePiece.update();
 	myGamePiece.speedX = 0;
     myGamePiece.speedY = 0;
     if (myGameArea.key && myGameArea.key == 37) {myGamePiece.speedX = -1; }
@@ -119,7 +110,24 @@ function updateGameArea() {
 	
     myGamePiece.newPos();
     myGamePiece.update();
-	}
+    myGameArea.frameNo += 1;
+    if (myGameArea.frameNo == 1 || everyinterval(150)) {
+        x = myGameArea.canvas.width;
+        minHeight = 20;
+        maxHeight = 200;
+        height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
+        minGap = 50;
+        maxGap = 200;
+        gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
+        myObstacles.push(new component(30, height, "green", x, 0));
+        myObstacles.push(new component(30, x - height - gap, "green", x, height + gap));
+    }
+    for (i = 0; i < myObstacles.length; i += 1) {
+        myObstacles[i].x += -10;
+        myObstacles[i].update();
+    }
+	
+}
 
 function everyinterval(n) {
     if ((myGameArea.frameNo / n) % 1 == 0) {return true;}
@@ -146,15 +154,20 @@ function clearmove() {
     myGamePiece.speedX = 0;
     myGamePiece.speedY = 0;
 }
+myGamePiece.speedX = 0;
+    myGamePiece.speedY = 0;
+    if (myGameArea.key && myGameArea.key == 37) {myGamePiece.speedX = -1; }
+    if (myGameArea.key && myGameArea.key == 39) {myGamePiece.speedX = 1; }
+    if (myGameArea.key && myGameArea.key == 38) {myGamePiece.speedY = -1; }
+    if (myGameArea.key && myGameArea.key == 40) {myGamePiece.speedY = 1; }
+    myGamePiece.newPos();
+    myGamePiece.update();
+	
+    myGamePiece.newPos();
+    myGamePiece.update();
 
 </script>
-<div style="text-align:center;width:480px;">
-	<p>Avoid the fishhooks and the seaweed!</p>
-  <button onmousedown="moveup()" onmouseup="clearmove()" ontouchstart="moveup()">UP</button><br><br>
-  <button onmousedown="moveleft()" onmouseup="clearmove()" ontouchstart="moveleft()">LEFT</button>
-  <button onmousedown="moveright()" onmouseup="clearmove()" ontouchstart="moveright()">RIGHT</button><br><br>
-  <button onmousedown="movedown()" onmouseup="clearmove()" ontouchstart="movedown()">DOWN</button>
-</div>
+
 </body>
 </html>
 
