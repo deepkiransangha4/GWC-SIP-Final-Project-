@@ -1,4 +1,4 @@
-<!DOCTYPE html>   <!---original--->
+<!DOCTYPE html> 
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -24,10 +24,11 @@ var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
         this.canvas.width = 1260;
-        this.canvas.height = 450;
+        this.canvas.height = 590;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-        this.interval = setInterval(updateGameArea, 20);
+        this.frameNo = 0;
+		this.interval = setInterval(updateGameArea, 20);
 		window.addEventListener('keydown', function (e){
 			myGameArea.key = e.keyCode;
 		})
@@ -70,19 +71,19 @@ function component(width, height, color, x, y, type) {
         this.x += this.speedX;
         this.y += this.speedY;
     }
-    this.crashWith = function(otherobj) {
-        var myleft = this.x;
-        var myright = this.x + (this.width);
-        var mytop = this.y;
-        var mybottom = this.y + (this.height);
-        var otherleft = otherobj.x;
-        var otherright = otherobj.x + (otherobj.width);
-        var othertop = otherobj.y;
-        var otherbottom = otherobj.y + (otherobj.height);
-        var crash = true;
-        if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
-            crash = false;
-        }
+    this.crashWith = function(otherobj) { 
+       var myleft = this.x; 
+       var myright = this.x + (this.width); 
+       var mytop = this.y; 
+       var mybottom = this.y + (this.height); 
+       var otherleft = otherobj.x;
+       var otherright = otherobj.x + (otherobj.width);
+       var othertop = otherobj.y;
+       var otherbottom = otherobj.y + (otherobj.height); 
+       var crash = true;
+       if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) { 
+           crash = false;
+        } 
         return crash;
     }
 }
@@ -95,10 +96,12 @@ function updateGameArea() {
             return;
         }
     }
+
     myGameArea.clear();
-    myGameArea.frameNo += 1;
+	
+	myGameArea.frameNo += 1;
     if (myGameArea.frameNo == 1 || everyinterval(150)) {
-        x = myGameArea.canvas.width;
+		x = myGameArea.canvas.width;
         minHeight = 20;
         maxHeight = 200;
         height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
@@ -121,9 +124,9 @@ function updateGameArea() {
     if (myGameArea.key && myGameArea.key == 40) {myGamePiece.speedY = 1; }
     myGamePiece.newPos();
     myGamePiece.update();
-	
     myGamePiece.newPos();
-    myGamePiece.update();
+    myGamePiece.update(); 
+	
 }
 
 function everyinterval(n) {
