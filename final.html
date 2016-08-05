@@ -17,6 +17,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 	<script src = "avatar_script.js"></script>
+	<script src = "enter_name_script.js"></script>
   </head>
   
   <body onload = "printName(); setAvatar(); myFunction();">
@@ -27,9 +28,9 @@
 	
 	
 	
-	<div class="narrow"  >	
+	<div id="narrow"  >	
 
-		<ul>
+		<ul style = "list-style-type: none;">
 		<h2>Salt Water Learning</h2>
 
 
@@ -78,17 +79,17 @@
 		
 	</div>	
 
-</div>
-   
+</div>   
 	<style>
 		#btn {
 			background-color: white;
 			color: black;
 			border: white;
+			
 		}
 		
-		body { background-color: aqua;
-		background-image: url("wave.jpg");
+		body { background-color: DarkOrange;
+
 		text-align: center;
 		font-family: "Hobo Std Medium", Arial, sans;
 		font-size: 200%;
@@ -97,7 +98,7 @@
 		
 
 		
-	ul {
+	<!--ul {
 
 		list-style-type: none;
 		margin: 0;
@@ -107,13 +108,13 @@
 		overflow: auto;
 		text-align: center;
 
-	}
+	}-->
 
 	#parent {
 	display: flex;
 	}
 	
-	.narrow{
+	#narrow{
 		background-color: #579CA4;
 		width: 20%;
 		overflow: auto;
@@ -121,6 +122,7 @@
 		height: 100vh;
 		
 		<!--vh is our saviour-->
+		list-style-type: none;
 		
 		}	
 		
