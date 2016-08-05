@@ -99,8 +99,8 @@ function updateGameArea() {
         minGap = 50;
         maxGap = 200;
         gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
-        myObstacles.push(new component(30, height, "green", x, 0));
-        myObstacles.push(new component(30, x - height - gap, "green", x, height + gap));
+        myObstacles.push(new component(70, height, "fishhook.png", x, 0, "image"));
+        myObstacles.push(new component(70, x - height - gap, "shortseaweed.png", x, height + gap, "image"));
     }
     for (i = 0; i < myObstacles.length; i += 1) {
         myObstacles[i].x += -10;
@@ -137,6 +137,7 @@ function clearmove() {
 }
 </script>
 <div style="text-align:center;width:480px;">
+	<p>Avoid the fishhooks and the seaweed!</p>
   <button onmousedown="moveup()" onmouseup="clearmove()" ontouchstart="moveup()">UP</button><br><br>
   <button onmousedown="moveleft()" onmouseup="clearmove()" ontouchstart="moveleft()">LEFT</button>
   <button onmousedown="moveright()" onmouseup="clearmove()" ontouchstart="moveright()">RIGHT</button><br><br>
