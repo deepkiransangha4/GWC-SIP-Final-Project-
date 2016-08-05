@@ -18,48 +18,77 @@
     <script src="js/bootstrap.min.js"></script>
 	<script src = "avatar_script.js"></script>
   </head>
-  <body onload = "printName(); setAvatar();">
+  
+  <body onload = "printName(); setAvatar(); myFunction();">
 	
-	<div class="container-fluid">
-	</div>
+	<div class="container-fluid" id= "parent">
 	
-   <title>
-   Life Event
-   </title>
-   
-   <h1>
-   Playdate
-   </h1>
-   <p> 
-    Gaia the guppy invites you on a playdate!
-When you get to Gaia’s house both of Gaia’s moms greet you.
-   </p>
-   <p>
-   How do you react?
-   </p>
-   
-    <a href='life_event_result_a.html'>	 <button type="button"  class="btn btn-info">Hi Gaia's Moms.</button></a> 
-	<a href='life_event_result_b.html'>	 <button type="button" class="btn btn-info">Gaia, why do you have two Moms?</button></a>
-	<a href='life_event_result_c.html'>	 <button type="button"  class="btn btn-info">You say hi, but feel uncomfortable.</button></a>
+	
+	
+	
+	
+	<div id="narrow"  >	
 
-	<div class="progress" style ="margin: 50px;">
-		<div class="progress-bar" role="progressbar" aria-valuenow="75"
-		aria-valuemin="0" aria-valuemax="100" style="width:75%">
-		<span class="sr-only"></span>
-		</div>
+		<ul style = "list-style-type: none;">
+		<h2>Salt Water Learning</h2>
+
+
+		  <li><div class="progress" style ="margin: 20px;">
+				<div class="progress-bar" role="progressbar" aria-valuenow="75"
+				aria-valuemin="0" aria-valuemax="100" style="width:75%">
+				<span class="sr-only"></span>
+				</div></li>
+		  <li>	<p id = "test"></p></li>
+		  <img id = "avatar" src = "#" style = "width: 30%;></img>
+
+		  <p id="yourname"></p>
+		  
+		</ul>
+
+
 	</div>
-	<p id = "test"></p>
-	<img id = "avatar" src = "#"  height="200" width="400" ></img>
-   
+	
+	
+	
+	
+	
+	
+	
+
+	<div  id = "wide"> 
+		
+	   <title>
+	   Life Event
+	   </title>
+	   
+	   <h1>
+	   Playdate
+	   </h1>
+	   <p> 
+		Gaia the guppy invites you on a playdate!
+	When you get to Gaia’s house both of Gaia’s moms greet you.
+	   </p>
+	   <p>
+	   How do you react?
+	   </p>
+	   
+		<a href='life_event_result_a.html'>	 <button type="button"  class="btn btn-info">Hi Gaia's Moms.</button></a> 
+		<a href='life_event_result_b.html'>	 <button type="button" class="btn btn-info">Gaia, why do you have two Moms?</button></a>
+		<a href='life_event_result_c.html'>	 <button type="button"  class="btn btn-info">You say hi, but feel uncomfortable.</button></a>
+		
+	</div>	
+
+</div>   
 	<style>
 		#btn {
 			background-color: white;
 			color: black;
 			border: white;
+			
 		}
 		
-		body { background-color: aqua;
-		background-image: url("wave.jpg");;
+		body { background-color: DarkOrange;
+
 		text-align: center;
 		font-family: "Hobo Std Medium", Arial, sans;
 		font-size: 200%;
@@ -67,7 +96,48 @@ When you get to Gaia’s house both of Gaia’s moms greet you.
 		}
 		
 
-	</style>
+		
+	<!--ul {
+
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		
+		background-color: #579CA4;
+		overflow: auto;
+		text-align: center;
+
+	}-->
+
+	#parent {
+	display: flex;
+	}
 	
+	#narrow{
+		background-color: #579CA4;
+		width: 20%;
+		overflow: auto;
+		overflow-y: auto;
+		height: 100vh;
+		
+		<!--vh is our saviour-->
+		list-style-type: none;
+		
+		}	
+		
+
+		
+	#wide{
+		
+		flex: 1;
+		}
+
+
+</style>
+
+	
+
+
+
 </body>
 </html>
