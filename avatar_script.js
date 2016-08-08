@@ -4,7 +4,7 @@ function printName(){
 }
 
 function setAvatar(){
-	sessionStorage.friendship_points = 0
+	
 	
 	if (sessionStorage.avatar == 1){
 		document.getElementById("avatar").src = "green_avatar.png";
