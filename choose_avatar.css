@@ -16,3 +16,8 @@ h1{
 #parent{
 	text-align: center;
 }
+body{
+	background-image: url("basic_bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}

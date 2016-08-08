@@ -17,12 +17,13 @@
 
 
 body{
-	background-image: url("photo_2970_20130331.jpg");
+	background-image: url("background.png");
 	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 h1{
-	color: white;
+	color: #1E4E5E;
 	text-align: center;
 	font-size: 100px;
 	font-family: "Hobo Std Medium", Arial, sans

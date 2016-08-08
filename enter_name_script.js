@@ -39,7 +39,7 @@ function draw_shells(){
 	for (i = 0; i < sessionStorage.friendship_points; i++){
 		var shell_pic = document.createElement("img"); 
 		
-		shell_pic.setAttribute('src', 'octopus1.png');
+		shell_pic.setAttribute('src', 'shell.png');
 		shell_pic.setAttribute('style', 'width: 20px');
 		document.getElementById("narrow").appendChild(shell_pic);
 		//document.body.appendChild(shell_pic);
