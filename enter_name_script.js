@@ -44,4 +44,7 @@ function draw_shells(){
 		document.getElementById("narrow").appendChild(shell_pic);
 		//document.body.appendChild(shell_pic);
 }}
+function sayShells(){
+	document.getElementById("shells").innerHTML = "You got "+sessionStorage.friendship_points+" shells!";
+}
 	

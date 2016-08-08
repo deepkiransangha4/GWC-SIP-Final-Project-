@@ -15,8 +15,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+	<script src = "enter_name_script.js"></script>
   </head>
-  <body>
+  <body onload = "sayShells();">
 	<div class="container-fluid">
 	</div>
 	<style>
@@ -41,6 +42,9 @@
 		p{
 		color: #1E4E5E;
 		}
+		#shells{
+			font-size: 50%;
+		}
 		
 		</style>
 	<p>
@@ -54,6 +58,10 @@ GAME OVER!
 
 <a href="avatar.html"> <button type="button"  class="btn btn-info btn-lg">Play Again?</button></a>
 <img src= "octopusend.png" width="200" height="200"> </img>
+
+<p id = "shells"></p>
+
+
   </body>
 </html>
 
