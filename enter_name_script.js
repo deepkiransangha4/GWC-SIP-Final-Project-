@@ -4,7 +4,6 @@ function saveName(){
 	
 	sessionStorage.yourname = elem.value;
 	
-	sessionStorage.friendship_points = 0
 	
 
 
@@ -43,8 +42,14 @@ function draw_shells(){
 		shell_pic.setAttribute('style', 'width: 20px');
 		document.getElementById("narrow").appendChild(shell_pic);
 		//document.body.appendChild(shell_pic);
-}}
+}
+}
 function sayShells(){
 	document.getElementById("shells").innerHTML = "You got "+sessionStorage.friendship_points+" shells!";
+}
+
+function resetShells(){
+	sessionStorage.friendship_points = 0;
+	console.log(sessionStorage.friendship_points);
 }
 	
