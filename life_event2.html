@@ -18,7 +18,7 @@
 	<script src = "enter_name_script.js"></script>
   </head>
   
-  <body onload = "printName(); setAvatar(); draw_shells();"> <!-- run in div instead of onload?-->
+  <body onload = "printName(); setAvatar(); "> <!-- run in div instead of onload?-->
 	
 	<div class="container-fluid" id= "parent">
 	
@@ -28,9 +28,11 @@
 	
 	<div id="narrow"  >	
 
-		<ul style = "list-style-type: none;">
+		<ul style = "list-style-type: none;" > 
 		<h2>Salt Water Learning</h2>
-
+			<script>
+				draw_shells();
+			</script>
 
 		  <li><div class="progress" style ="margin: 20px;">
 				<div class="progress-bar" role="progressbar" aria-valuenow="75"
@@ -38,7 +40,7 @@
 				<span class="sr-only"></span>
 				</div></li>
 		  <li>	<p id = "test"></p></li>
-		  <img id = "avatar" src = "#" style = "width: 30%;></img>
+		  <img id = "avatar" src = "#" style = "width: 30%;"  ></img>
 
 		  <p id="yourname"></p>
 		  
