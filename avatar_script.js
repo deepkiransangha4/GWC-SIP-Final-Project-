@@ -1,6 +1,6 @@
 function printName(){
 	var elem = document.getElementById("test");
-	elem.innerHTML = "Your name is "+window.name+" "+sessionStorage.yourname;
+	elem.innerHTML = "Your name is: "+window.name+" "+sessionStorage.yourname;
 }
 
 function setAvatar(){
