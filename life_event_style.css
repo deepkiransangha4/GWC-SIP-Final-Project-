@@ -46,5 +46,5 @@ body{
 	background-image: url("basic_bg.png");
 	background-repeat: no-repeat;
 	background-size: cover;
-}
+	margin: 30px;
 }
