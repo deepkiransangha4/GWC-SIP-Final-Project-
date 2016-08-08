@@ -25,6 +25,9 @@ p {
 	font-size: 20px;
 }
 body{
-		font-family: "Hobo Std Medium", Arial, sans
+		font-family: "Hobo Std Medium", Arial, sans;
+		background-image: url("basic_bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
 
 }

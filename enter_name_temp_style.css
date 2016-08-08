@@ -3,7 +3,10 @@ body{
 	margin-left: 80px;
 	margin-right: 80px;
 	margin-top: 150px;
-	font-family: "Hobo Std Medium", Arial, sans
+	font-family: "Hobo Std Medium", Arial, sans;
+	background-image: url("basic_bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 #name{
 	text-align: center;
@@ -13,5 +16,5 @@ body{
 }
 h2{
 	margin: 50px;
-	color: #ffffff;
+	color: #1E4E5E;
 }
