@@ -12,7 +12,9 @@
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<style>
+
+		<style>
+
 canvas {
     border:1px solid #d3d3d3;
     background-color: #22EFED;
@@ -34,9 +36,11 @@ body { background-color: DarkOrange;
 }
 
 </style>
+
 <script src="js/bootstrap.min.js"></script>
 </head>
 <body onload="startGame()">
+
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -44,6 +48,7 @@ body { background-color: DarkOrange;
 		
 		<div class="container">
 		</div>
+		
 <script>
 
 var myGamePiece;
@@ -57,8 +62,9 @@ function startGame() {
 var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
+	
         this.canvas.width = 1260;
-        this.canvas.height = 450;
+        this.canvas.height = 550;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.frameNo = 0;
