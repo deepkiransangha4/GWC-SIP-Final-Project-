@@ -45,7 +45,11 @@ function draw_shells(){
 }
 }
 function sayShells(){
-	document.getElementById("shells").innerHTML = "You got "+sessionStorage.friendship_points+" shells!";
+	if(sessionStorage.friendship_points == 1){
+		document.getElementById("shells").innerHTML = "You have "+sessionStorage.friendship_points+" shell!";
+	}else{
+		document.getElementById("shells").innerHTML = "You have "+sessionStorage.friendship_points+" shells!"
+	}
 }
 
 function resetShells(){
