@@ -1,3 +1,3 @@
 # GWC-SIP-Final-Project
-#testing out how to commit
-#what is the point of a REadme anyway?
+# Salt Water Learning 
+#Girls Who Code Summer Immersion Program 2016 at Electronic Arts 
